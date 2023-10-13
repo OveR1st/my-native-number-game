@@ -5,14 +5,14 @@ import { store } from './store'
 
 import { StatusBar } from 'expo-status-bar'
 
+import { StartGameScreen } from 'pages/StartGameScreen'
+
 export const App = () => {
   return (
     <Provider store={store}>
       <StatusBar style="dark" />
       <View style={styles.appContainer}>
-        <View>
-          <Text>HELLO</Text>
-        </View>
+        <StartGameScreen />
       </View>
     </Provider>
   )
