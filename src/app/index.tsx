@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, ImageBackground } from 'react-native'
 import { Provider } from 'react-redux'
 
 import { store } from './store'
@@ -12,23 +12,32 @@ export const App = () => {
   return (
     <Provider store={store}>
       <StatusBar style="dark" />
-      <View style={styles.appContainer}>
-        <LinearGradient
-          // Background Linear Gradient
-          colors={['#4e0329', '#ddb52f']}
+
+      <LinearGradient
+        // Background Linear Gradient
+        colors={['#4e0329', '#ddb52f']}
+        style={styles.appContainer}
+      >
+        <ImageBackground
+          resizeMode="cover"
+          source={require('../../assets/images/background.png')}
+          style={styles.appContainer}
+          imageStyle={styles.backgroundImage}
         >
           <StartGameScreen />
-        </LinearGradient>
-      </View>
+        </ImageBackground>
+      </LinearGradient>
     </Provider>
   )
 }
 
 const styles = StyleSheet.create({
   appContainer: {
-    backgroundColor: '#ddb52f',
     flex: 1,
     // paddingTop: 50,
     // paddingHorizontal: 16,
+  },
+  backgroundImage: {
+    opacity: 0.15,
   },
 })

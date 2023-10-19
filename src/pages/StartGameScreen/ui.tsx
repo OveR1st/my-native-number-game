@@ -1,10 +1,4 @@
-import {
-  GestureResponderEvent,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-} from 'react-native'
+import { GestureResponderEvent, StyleSheet, View } from 'react-native'
 import { Input } from 'shared/Input'
 import { PrimaryButton } from 'shared/PrimaryButton'
 
