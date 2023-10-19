@@ -1,8 +1,17 @@
-import { StyleSheet, Text, TextInput, View } from 'react-native'
+import {
+  GestureResponderEvent,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from 'react-native'
 import { Input } from 'shared/Input'
 import { PrimaryButton } from 'shared/PrimaryButton'
 
 export const StartGameScreen = () => {
+  function pressHandler(e: GestureResponderEvent) {
+    console.log('Pressed', e.target)
+  }
   return (
     //TODO need to feature/widgets ?
     <View style={styles.inputContainer}>
@@ -13,15 +22,15 @@ export const StartGameScreen = () => {
         autoCapitalize={'none'}
         autoCorrect={false}
       />
-      <PrimaryButton>Reset</PrimaryButton>
-      <PrimaryButton>Confirm</PrimaryButton>
+      <PrimaryButton pressHandler={pressHandler}>Reset</PrimaryButton>
+      <PrimaryButton pressHandler={pressHandler}>Confirm</PrimaryButton>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   inputContainer: {
-    backgroundColor: '#72063c',
+    backgroundColor: '#4e0329',
     marginTop: 100,
     marginHorizontal: 24,
     borderRadius: 8,
