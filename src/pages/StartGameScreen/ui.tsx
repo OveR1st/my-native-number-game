@@ -6,7 +6,13 @@ export const StartGameScreen = () => {
   return (
     //TODO need to feature/widgets ?
     <View style={styles.inputContainer}>
-      <Input style={styles.numberInput} maxLength={2} />
+      <Input
+        style={styles.numberInput}
+        maxLength={2}
+        keyboardType={'number-pad'}
+        autoCapitalize={'none'}
+        autoCorrect={false}
+      />
       <PrimaryButton>Reset</PrimaryButton>
       <PrimaryButton>Confirm</PrimaryButton>
     </View>
