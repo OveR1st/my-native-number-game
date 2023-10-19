@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   inputContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#4e0329',
+    backgroundColor: '#3b021f',
     marginTop: 100,
     marginHorizontal: 24,
     borderRadius: 8,
